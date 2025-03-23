@@ -16,12 +16,13 @@ def caching_fibonacci() -> Callable[[int], int]:
     
     return fibonacci
     
-result = caching_fibonacci()
+if __name__ =="__main__":
+    result = caching_fibonacci()
+    print(result(10))
+    print(result(15))
 
-
-print(result(10))
-print(result(15))
-
+assert result(10) == 55
+assert result(15) == 610
 
 
 
